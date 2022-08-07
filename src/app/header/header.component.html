@@ -1,0 +1,38 @@
+<header id="header">
+    <div id="mo_header" class="mo-header-v2 mo-header-stick">
+        <!-- Start Header Menu -->
+        <div class="mo-header-menu">
+            <div class="container-menu">
+                <div (click)="showMobileMenu($event)" id="mo-header-icon" [class.active]="menuIcon" class="mo-header-icon visible-xs visible-sm">
+                    <span></span>
+                </div>
+
+                <div class="mo-col-logo">
+                    <div class="mo-logo">
+                        <a href="https://motivoweb.com/ruya/demo/">
+                            <img class="logo " src="/assets/img/logo2.png" alt="logo" />
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="mo-col-menu">
+                    <div class="mo-menu-list" [class.hidden-xs]="!menu" [class.hidden-sm]="!menu">
+                        <ul id="menu-main-menu" class="text-right">
+                            <li id="menu-item-484" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-menu-item fullwidth menu-item-484"><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/']">Home</a>
+                            </li>
+                            <li id="menu-item-688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nomega-menu-item algleft menu-item-688"><a routerLinkActive="active" [routerLink]="['/favourites']">Favourites</a>
+                            </li>
+                            <li id="menu-item-654" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nomega-menu-item algleft menu-item-654"><a routerLinkActive="active" [routerLink]="['/uploads']">Upload</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End menu -->
+            </div>
+            <!-- End container -->
+        </div>
+        <!-- End mo-header-menu -->
+    </div>
+    <!-- End mo_header -->
+</header>

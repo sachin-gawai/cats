@@ -1,0 +1,18 @@
+.mo-header-v2 .mo-menu-list>ul>li>a.active {
+    color: #d35ba1;
+}
+
+.mo-header-v2 .mo-col-menu {
+    height: 100%;
+    vertical-align: middle;
+    display: flex!important;
+    flex-direction: column;
+    -webkit-box-align: center;
+    justify-content: center;
+    align-items: end;
+    margin-right: 50px;
+}
+
+.mo-header-v2 .mo-logo img {
+    height: 80px;
+}

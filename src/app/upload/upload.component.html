@@ -1,0 +1,47 @@
+<div class="main-content">
+    <div class="page-header pagetitle-v2">
+        <div class="hero parallax wrapper mo-title-bar-wrap">
+            <div class="container parallax-container">
+                <div class="cd-intro mo-title-bar">
+                    <h5 style="color: white;" class="mo-text-ellipsis">Upload</h5>
+                </div>
+            </div>
+            <!-- .container.reskew -->
+        </div>
+
+        <!-- .hero -->
+    </div>
+    <!-- .page-header -->
+
+
+    <div class="container fileUploadWrapper">
+        <form [formGroup]="form">
+            <div class="row">
+
+                <div *ngIf="progress" class="col-md-12 d-flex justify-content-center">
+                    <div style="width: 50%;">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" [style.width.%]="progress"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 d-flex justify-content-center">
+                    <div class="fileupload" appDragNDrop (click)="fileField.click()" (fileDropped)="upload($event)">
+                        <span class="ddinfo">Choose a file or drag here</span>
+                        <input type="file" name="files" #fileField (change)="upload($any($event).target.files)" hidden multiple />
+                    </div>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <div class="image-list" *ngFor="let file of fileArr; let i = index">
+                        <div class="profile">
+                            <img [src]="sanitize(file['url'])" alt="" />
+                        </div>
+                        <p>{{ file.item.name }}</p>
+                    </div>
+                    <p class="message">{{ msg }}</p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

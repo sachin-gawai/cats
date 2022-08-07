@@ -1,0 +1,93 @@
+<div class="main-content">
+    <div class="page-header pagetitle-v2">
+        <div class="hero parallax wrapper mo-title-bar-wrap">
+            <div class="container parallax-container">
+                <div class="cd-intro mo-title-bar">
+                    <h5 style="color: white;" class="mo-text-ellipsis">Favourites</h5>
+                </div>
+            </div>
+            <!-- .container.reskew -->
+        </div>
+
+        <!-- .hero -->
+    </div>
+    <!-- .page-header -->
+
+    <div class="motivo-row">
+        <div class="vc_row wpb_row vc_row-fluid vc_custom_1569526915316 bg-grey dark_txt svg_none svg_bottom_none  svg_bottom">
+            <div class="mo-vc-row-ovelay"></div>
+            <div class="container main-container">
+                <div class="wpb_column vc_column_container vc_col-sm-12 mo-column-62dd52b41f580">
+                    <div class="vc_column-inner">
+                        <div class="wpb_wrapper ">
+                            <div class="wpb_wrapper-inner">
+
+                                <div class="m-5">
+                                    <div class="row wpb_row vc_inner vc_row-fluid vc_custom_1569562890785 vc_column-gap-0">
+                                        <ng-container *ngIf="!noRecord else noRecordMsg">
+                                            <div *ngFor="let cat of cats;let i = index;trackBy:trackByCatsId" class="mb-3 wpb_column vc_column_container col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mo-column-62dd52b42232a">
+                                                <div class="vc_column-inner">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="image-box  image-box-style4">
+
+                                                            <div class="thumb-service" style="background-image: url({{cat.image.url}});">
+                                                                <div class="votecount-container">
+                                                                    <div class="vote-count">
+                                                                        <div>Votes {{cat?.vote.length}}</div>
+                                                                        <div class="d-flex align-items-center">
+                                                                            <span [ngClass]="cat?.favId ? 'favorite' : 'unfavorite'" class=" material-icons" style="font-size: 25px;">
+                                                                            favorite
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <img style="visibility: hidden !important;" src="assets/uploads/2019/10/service18.jpg" alt="Our Strategy" />
+                                                            </div>
+                                                            <div class="title-wrap d-block">
+                                                                <div class="d-flex justify-content-between p-2">
+                                                                    <button (click)="saveVote(cat.image_id,i,cat?.voteId)" type="button" class="btn btn-success" title="Love it">
+                                                                        <div class="d-flex">
+                                                                            <i  aria-hidden="true" class="v-icon material-icons theme--light">thumb_up</i></div>
+                                                                   </button>
+                                                                    <button (click)="deleteVote(cat.image_id,i,cat?.vote)" type="button" class="btn btn-danger" title="Nope it">
+                                                                            <div class="d-flex">
+                                                                                <i  aria-hidden="true" class="v-icon material-icons theme--light">thumb_down</i></div>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="row-btn">
+                                                                    <div class="d-flex justify-content-center" (click)="favIt(cat.image_id,i,cat?.favId)" title="Fav it">
+                                                                        <span [ngClass]="cat?.favId ? 'favorite' : 'unfavorite'" class=" material-icons">
+                                                                        favorite
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </ng-container>
+                                        <ng-template #noRecordMsg>
+                                            <div class="noRecord">
+                                                No Favourites yet, just click on one of the images to 'Fav-it'
+                                            </div>
+                                        </ng-template>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="totalResult?.length >= limit" class="col-12 d-flex justify-content-center p-3">
+        <div class="d-flex">
+            <button type="button" (click)="loadMore()" class="btn btn-dark">Load More</button>
+        </div>
+    </div>
+</div>

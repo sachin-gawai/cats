@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~ngx-toastr/toastr.css';
+.motivo-row {
+    min-height: 400px;
+}
+
+.thumb-service {
+    min-height: 200px
+}
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width:1028px) {
+    .fileUploadWrapper {
+        min-height: 100vh !important;
+    }
+    .fileupload {
+        width: 100% !important;
+    }
+    .mo-header-v2[_ngcontent-kys-c55] .mo-logo[_ngcontent-kys-c55] img[_ngcontent-kys-c55] {
+        height: 78px !important;
+    }
+}

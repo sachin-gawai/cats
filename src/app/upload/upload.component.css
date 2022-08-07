@@ -1,0 +1,159 @@
+.progress {
+    margin-bottom: -15px;
+}
+
+.fileupload {
+    background-image: url("/assets/img/upload-icon.png");
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: center;
+    background-color: #ffffff;
+    height: 300px;
+    width: 50%;
+    cursor: pointer;
+    border: 2px dashed #0f68ff;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    background-position: center 60px;
+    margin-top: 50px;
+}
+
+.ddinfo {
+    display: block;
+    text-align: center;
+    padding-top: 160px;
+    color: #a0a1a2;
+}
+
+.image-list {
+    display: flex;
+    width: 50%;
+    background: #C2DFFC;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 10px 10px 10px 15px;
+    margin-bottom: 10px;
+}
+
+.image-list p {
+    line-height: normal;
+    padding: 0;
+    margin: 0 0 0 14px;
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    color: #150938;
+    font-size: 14px;
+}
+
+.message {
+    text-align: center;
+    color: #C2DFFC;
+}
+
+.remove {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.profile {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.profile img {
+    width: 100%;
+}
+
+.remove img {
+    width: 15px;
+    position: relative;
+    top: -2px;
+}
+
+.fileUploadWrapper .card-body {
+    max-height: 330px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.image-box-style4 .title-wrap {
+    padding: 0px;
+}
+
+.favorite {
+    color: #bf0b74;
+    font-size: 75px;
+    cursor: pointer;
+}
+
+.unfavorite {
+    color: white;
+    font-size: 75px;
+    cursor: pointer;
+}
+
+.thumb-service {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-success i,
+.btn-danger i {
+    font-size: 20px;
+}
+
+select {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.votecount-container {
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: auto;
+    bottom: 0px;
+}
+
+.vote-count {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 9px;
+    background-color: #00000052;
+}
+
+.btn.focus,
+.btn:focus,
+.btn:hover {
+    color: rgb(246, 240, 240);
+    text-decoration: none;
+}
+
+.page-header .mo-title-bar-wrap {
+    background: #000;
+    background-image: url(/assets/img/bg-titlebar.jpg);
+    background-position: revert;
+}
+
+.pagetitle-v2 .mo-title-bar-wrap {
+    height: 200px;
+}
+
+.fileUploadWrapper {
+    min-height: 400px;
+}
+
+.progress-bar {
+    border-radius: 0;
+    height: 20px;
+    box-shadow: none;
+    max-width: 100%;
+}
